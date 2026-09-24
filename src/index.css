@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
+    --font-display: 'Playfair Display', 'Cinzel', Georgia, serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  /* Universal sharp edge mandate: strictly remove all curves */
+  *,
+  *::before,
+  *::after {
+    border-radius: 0px !important;
+  }
+
+  body {
+    font-family: var(--font-serif);
+    background-color: #F8F9FA;
+    color: #1E293B;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+  }
+
+  /* Custom crisp scrollbar for classy light theme */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F1F5F9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 0px !important;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+  }
+}
+
+/* Classy Formal Light Panels and Cards */
+.formal-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+}
+
+.formal-card:hover {
+  border-color: #94A3B8;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+.formal-input {
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #0F172A;
+  transition: all 0.15s ease-in-out;
+}
+
+.formal-input:focus {
+  border-color: #1D4ED8;
+  outline: none;
+  box-shadow: 0 0 0 1px #1D4ED8;
+}
+
+.formal-btn-primary {
+  background-color: #1E3A8A;
+  color: #FFFFFF;
+  border: 1px solid #172554;
+  transition: all 0.15s ease-in-out;
+}
+
+.formal-btn-primary:hover {
+  background-color: #1D4ED8;
+}
+
+.glass-panel {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+}
+
+.glass-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+}
+
+.glass-card:hover {
+  border-color: #94A3B8;
+  background-color: #F8FAFC;
+}
+
+.glass-input {
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #0F172A;
+  transition: all 0.15s ease-in-out;
+}
+
+.glass-input:focus {
+  border-color: #1D4ED8;
+  outline: none;
+  box-shadow: 0 0 0 1px #1D4ED8;
+}
